@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  height: 100%;
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  margin: 120px auto;
+  border: 5px solid rgb(20, 20, 207);
+  max-width: 400px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 25px;
+}
+header {
+  font-size: 30px;
+  font-weight: 600;
+}
+.inputField {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+input {
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+.add {
+  width: 60px;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #8e49e8;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+.todoList {
+  padding: 0;
+}
+li {
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+}
+li .delete {
+  position: absolute;
+  right: 0px;
+  background: red;
   color: white;
+  width: 45px;
+  text-align: center;
+  border: 0 3px 3px 0;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+li .tick {
+  position: absolute;
+  right: 50px;
+  background: green;
+  color: white;
+  width: 45px;
+  text-align: center;
+  border: 0 3px 3px 0;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li .done {
+  position: absolute;
+  right: 50px;
+  width: 45px;
+  text-align: center;
+  border: 0 3px 3px 0;
+  cursor: pointer;
+}
+.footer button {
+  margin-left: 10px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  background: chartreuse;
 }
