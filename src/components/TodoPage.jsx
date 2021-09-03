@@ -78,31 +78,36 @@ function TodoPage() {
             value={todoName}
             onChange={(e) => setTodoName(e.target.value)}
           />
-          <FaPlusSquare className="add" onClick={addTodoData} />
+          {todoName.length ? (
+            <FaPlusSquare className="add" onClick={addTodoData} />
+          ) : (
+            <FaPlusSquare
+              className="add"
+              onClick={() => alert("input field empty")}
+            />
+          )}
         </div>
-        <div>
-          <ul className="todoList">
-            {allTodos.map((todo) => {
-              return (
-                <li>
-                  {todo.name}
-                  {!todo.completed ? (
-                    <span className="tick">
-                      <FaCheck onClick={() => todoCheck(todo._id)} />
-                    </span>
-                  ) : (
-                    <span className="done">
-                      <IoCheckmarkDoneCircleOutline />
-                    </span>
-                  )}
-                  <span className="delete">
-                    <AiFillDelete onClick={() => removeTodo(todo._id)} />
+        <ul className="todoList">
+          {allTodos.map((todo) => {
+            return (
+              <li>
+                {todo.name}
+                {!todo.completed ? (
+                  <span className="tick">
+                    <FaCheck onClick={() => todoCheck(todo._id)} />
                   </span>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                ) : (
+                  <span className="done">
+                    <IoCheckmarkDoneCircleOutline />
+                  </span>
+                )}
+                <span className="delete">
+                  <AiFillDelete onClick={() => removeTodo(todo._id)} />
+                </span>
+              </li>
+            );
+          })}
+        </ul>
         <div className="footer">
           <button onClick={completed}>Completed</button>
           <button onClick={pending}>Pending</button>

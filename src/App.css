@@ -11,7 +11,7 @@ body {
   width: 100%;
 }
 .wrapper {
-  margin: 120px auto;
+  margin: 85px auto;
   border: 5px solid rgb(20, 20, 207);
   max-width: 400px;
   width: 100%;
@@ -51,6 +51,8 @@ input {
 }
 .todoList {
   padding: 0;
+  height: 43vh;
+  overflow: auto;
 }
 li {
   list-style: none;
@@ -95,4 +97,23 @@ li .done {
   padding: 5px 5px;
   border-radius: 10px;
   background: chartreuse;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }
