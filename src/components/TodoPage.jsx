@@ -70,7 +70,7 @@ function TodoPage() {
   return (
     <>
       <div className="wrapper">
-        <header>Todo App</header>
+        <header>Digitalogy</header>
         <div className="inputField">
           <input
             type="text"
